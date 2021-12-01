@@ -9,6 +9,7 @@ data(med)
 med$log.vol <- log(med$vol)
 med <- na.omit(med)
 
+?gamair
 
 (gm_efs_Tweedie_rv <- mgcv::gam(list(count ~ s(lo, la, bs = "ds", m = c(1, .5), k = 150) +
          s(T.20, bs = "cr", k = 10) + s(Sal20, bs = "cr", k = 10) + 
