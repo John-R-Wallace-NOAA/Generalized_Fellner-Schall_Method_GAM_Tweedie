@@ -34,7 +34,8 @@ lines(coast$lon, coast$lat, col = 'brown')
 
 dev.new(height = 600, width = 500)
 numLevels <- c(5, 10, 15, 20, 30, 40)[6]
-image(zz$y, zz$x, zz$z, col= rev(heat.colors(numLevels)), cex.lab=1.2, cex.axis=1.15, xlim = c(-20.5, 1), ylim = c(42, 64 ), xlab = 'Longitude', ylab = 'Latitude') 
+# Using image() to setup the figure, x and y are reversed so not plotting is seen.  type = 'n' doesn't work with image().
+image(zz$y, zz$x, zz$z, col = rev(heat.colors(numLevels)), cex.lab=1.2, cex.axis=1.15, xlim = c(-20.5, 1), ylim = c(42, 64 ), xlab = 'Longitude', ylab = 'Latitude') 
 .filled.contour(zz$x, zz$y, zz$z, levels = seq(min(zz$z, na.rm = TRUE), max(zz$z, na.rm = TRUE), length = numLevels) , col= rev(heat.colors(numLevels))) 
 contour(zz$x, zz$y, zz$z, nlevels = 10, add = TRUE)
 lines(coast$lon, coast$lat, col = 'brown')
