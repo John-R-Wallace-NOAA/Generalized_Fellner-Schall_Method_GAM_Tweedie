@@ -7,23 +7,26 @@ R code to closely recreate the analysis in the methods paper:
 
 A GAM model using the Fellner-Schall method 
 
-     [ mgcv::gam(..., optimizer = "efs") ], 
+     mgcv::gam(..., optimizer = "efs")
 
 with a Tweedie error model 
 
-     [ mgcv::gam(..., family = twlss()) ] 
+     mgcv::gam(..., family = twlss()) 
      
 where the shape and scale parameters vary by square root of bottom depth 
      
-     [ mgcv::gam(list(count ~ ..., ~ s(I(b.depth^.5), bs = "cr", k = 10), ~ s(I(b.depth^.5), bs = "cr", k = 10)), ...) ].
+     mgcv::gam(list(count ~ ..., ~ s(I(b.depth^.5), bs = "cr", k = 10), ~ s(I(b.depth^.5), bs = "cr", k = 10)), ...)
      
 Vessel is also included as a random variable 
 
-     [ mgcv::gam(list(count ~ ... +  s(ship, bs = "re") + ...), ...) ] 
+     mgcv::gam(list(count ~ ... +  s(ship, bs = "re") + ...), ...)
 
 and the log volume of the net 
 
-     [ mgcv::gam(list(count ~ ... + offset(log.vol) + ...), ...) ] is used as an offset.
+     mgcv::gam(list(count ~ ... + offset(log.vol) + ...), ...) 
+     
+is used as an offset.
+     
 #
 
 R packages:
