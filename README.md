@@ -5,7 +5,7 @@ R code to closely recreate the analysis in the methods paper:
 
 ##### ( https://onlinelibrary.wiley.com/doi/epdf/10.1111/biom.12666 )
 
-A GAM model using the Fellner-Schall method [ mgcv::gam(..., optimizer = "efs") ], with a Tweedie error model [ mgcv::gam(..., family = twlss()) ] where the shape and scale parameters vary by bottom depth is used.
+A GAM model using the Fellner-Schall method [ mgcv::gam(..., optimizer = "efs") ], with a Tweedie error model [ mgcv::gam(..., family = twlss()) ] where the shape and scale parameters varying by bottom depth is used.
 Vessel is also included as a random variable and the volume of the net is used as an offset.
 #
 
