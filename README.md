@@ -11,8 +11,27 @@ Vessel is also included as a random variable and the volume of the net is used a
 
 R packages:
 - mgcv
+ ``` r
+ Generalized additive (mixed) models, some of their extensions and other generalized ridge regression with
+ multiple smoothing parameter estimation by (Restricted) Marginal Likelihood, Generalized Cross Validation and
+ similar, or using iterated nested Laplace approximation for fully Bayesian inference. See Wood (2017)
+ <doi:10.1201/9781315370279> for an overview.  Includes a gam() function, a wide variety of smoothers, 'JAGS'
+ support and distributions beyond the exponential family.
+
+ ``` 
 - gamair
+``` r
+Data sets and scripts used in the book 'Generalized Additive Models: An Introduction with R', Wood
+(2006,2017) CRC.
+``` 
+
 - fields
+``` r
+For curve, surface and function fitting with an emphasis on splines, spatial data, geostatistics, and spatial
+statistics. The major methods include cubic, and thin plate splines, Kriging, and compactly supported
+covariance functions for large data sets. ...
+```
+
 #
 
 Additional figures beyond those in the paper are looked at.
