@@ -13,7 +13,7 @@ with a Tweedie error model
 
      [ mgcv::gam(..., family = twlss()) ] 
      
-where the shape and scale parameters vary by squareroot of bottom depth 
+where the shape and scale parameters vary by square root of bottom depth 
      
      [ mgcv::gam(list(count ~ ..., ~ s(I(b.depth^.5), bs = "cr", k = 10), ~ s(I(b.depth^.5), bs = "cr", k = 10)), ...) ].
      
