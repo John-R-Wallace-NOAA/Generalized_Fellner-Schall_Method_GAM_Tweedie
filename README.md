@@ -5,6 +5,8 @@ R code to closely recreate the analysis in the methods paper:
 
 ##### ( https://onlinelibrary.wiley.com/doi/epdf/10.1111/biom.12666 )
 
+# 
+
 A GAM model using the Fellner-Schall method 
 
      mgcv::gam(..., optimizer = "efs")
