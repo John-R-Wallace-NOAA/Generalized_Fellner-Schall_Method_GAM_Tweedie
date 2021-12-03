@@ -1,5 +1,5 @@
 
-R code to closely recreate the analysis in the methods paper:
+R code (under the 'R' subdirectory) to closely recreate the analysis in the methods paper:
 
 ##### A Generalized Fellner-Schall Method for Smoothing Parameter Optimization with Application to Tweedie Location, Scale and Shape Models
 
@@ -7,7 +7,7 @@ R code to closely recreate the analysis in the methods paper:
 
 # 
 
-A GAM model using the Fellner-Schall method 
+The GAM model uses the Fellner-Schall method 
 
      mgcv::gam(..., optimizer = "efs")
 
@@ -56,7 +56,7 @@ covariance functions for large data sets. ...
 
 #
 
-Additional figures beyond those in the paper are looked at.
+Additional figures besides those in the paper were looked at.
 
 Mackerel eggs 2010, gam.check() figure:
 
