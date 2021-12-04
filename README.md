@@ -7,21 +7,25 @@ R code to closely recreate the analysis in the methods paper:
 
 # 
 
-The GAM model for the 2010 mackerel egg count data uses the Fellner-Schall method 
+The GAM model for the 2010 mackerel egg count data uses low rank isotropic splines on the spatial data (long/lat)
 
-     mgcv::gam(..., optimizer = "efs")
+      mgcv::gam(list(count ~ s(lo, la, bs = "ds", m = c(1, .5), k = 150), ...), ...)  # ?smooth.construct.ds.smooth.spec
+
+the Fellner-Schall optimizer method
+
+     mgcv::gam(..., optimizer = "efs")  # ?gam
 
 with a Tweedie error model 
 
-     mgcv::gam(..., family = twlss()) 
+     mgcv::gam(..., family = twlss())  # ?twlss
      
-where the shape and scale parameters vary by square root of bottom depth 
+where the shape and scale parameters vary by square root of bottom depth (See the Help section in ?twlss and the methods paper.)
      
      mgcv::gam(list(count ~ ..., ~ s(I(b.depth^.5), bs = "cr", k = 10), ~ s(I(b.depth^.5), bs = "cr", k = 10)), ...)
      
 Vessel is also included as a random variable 
 
-     mgcv::gam(list(count ~ ... +  s(ship, bs = "re") + ...), ...)
+     mgcv::gam(list(count ~ ... +  s(ship, bs = "re") + ...), ...)  # ?smooth.terms 
 
 and the log volume of the net 
 
