@@ -25,7 +25,7 @@ where the shape and scale parameters vary by square root of bottom depth (See th
      
 Vessel is also included as a random variable 
 
-     mgcv::gam(list(count ~ ... +  s(ship, bs = "re") + ...), ...)  # ?smooth.terms 
+     mgcv::gam(list(count ~ ... +  s(ship, bs = "re") + ...), ...)  # Random effects section in ?smooth.terms 
 
 and the log volume of the net 
 
