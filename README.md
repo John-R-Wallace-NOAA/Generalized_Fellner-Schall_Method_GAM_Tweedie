@@ -7,7 +7,7 @@ R code to closely recreate the analysis in the methods paper:
 
 # 
 
-The GAM model uses the Fellner-Schall method 
+The GAM model for the 2010 mackerel egg count data uses the Fellner-Schall method 
 
      mgcv::gam(..., optimizer = "efs")
 
