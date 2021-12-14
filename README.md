@@ -1,5 +1,5 @@
 
-R code to closely recreate the analysis in the methods paper:
+R code (inside the 'R' folder) to closely recreate the analysis in the methods paper :
 
 ##### A Generalized Fellner-Schall Method for Smoothing Parameter Optimization with Application to Tweedie Location, Scale and Shape Models
 
