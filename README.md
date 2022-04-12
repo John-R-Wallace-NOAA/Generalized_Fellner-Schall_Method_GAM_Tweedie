@@ -74,11 +74,11 @@ Mackerel eggs 2010, fields image.plot():
 
 ![Mackerel Eggs 2010, fields image.plot()](2010_Mackerel_Eggs_Figures/Figures/Mackerel_Eggs_2010_fields_image.plot().png)
 #
-Mackerel eggs 2010, .filled.contour() figure:
+Mackerel eggs 2010, graphics::.filled.contour() figure:
 
 ![](2010_Mackerel_Eggs_Figures/Figures/Mackerel_Eggs_2010_.filled.contour()_Figure.png)
 # 
-Mackerel eggs 2010, .filled.contour() with various contour levels:
+Mackerel eggs 2010, graphics::.filled.contour() with various contour levels:
 
 ![](2010_Mackerel_Eggs_Figures/Figures/Mackerel_Eggs_2010_.filled.contour()_Various_Levels.png)
 # 
