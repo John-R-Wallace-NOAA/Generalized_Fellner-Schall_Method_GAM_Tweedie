@@ -13,11 +13,11 @@ The GAM model for the 2010 mackerel egg count data uses low rank isotropic splin
 
       mgcv::gam(list(count ~ s(lo, la, bs = "ds", m = c(1, .5), k = 150), ...), ...)  # ?smooth.construct.ds.smooth.spec
 
-the Fellner-Schall optimizer method
+with the Fellner-Schall optimizer method
 
      mgcv::gam(..., optimizer = "efs")  # ?gam
 
-with a Tweedie error model 
+In addition, a Tweedie error model is used
 
      mgcv::gam(..., family = twlss())  # ?twlss
      
