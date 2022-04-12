@@ -7,6 +7,8 @@ R code (inside the 'R' folder) to closely recreate the analysis in the methods p
 
 # 
 
+A breakdown of the model parts is given below:
+
 The GAM model for the 2010 mackerel egg count data uses low rank isotropic splines on the spatial data (long/lat)
 
       mgcv::gam(list(count ~ s(lo, la, bs = "ds", m = c(1, .5), k = 150), ...), ...)  # ?smooth.construct.ds.smooth.spec
