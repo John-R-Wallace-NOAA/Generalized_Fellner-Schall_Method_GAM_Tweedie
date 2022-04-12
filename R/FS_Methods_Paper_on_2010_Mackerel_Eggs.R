@@ -39,7 +39,7 @@ lines(coast$lon, coast$lat, col = 'brown')
 dev.new(height = 600, width = 500)
 numLevels <- c(5, 10, 15, 20, 30, 40)[6]
 plot(NA, NA, type = 'n', cex.lab=1.2, cex.axis=1.15, xlim = c(-20.5, 1), ylim = c(42, 64 ), xlab = 'Longitude', ylab = 'Latitude') 
-.filled.contour(zz$x, zz$y, zz$z, levels = seq(min(zz$z, na.rm = TRUE), max(zz$z, na.rm = TRUE), length = numLevels) , col= rev(heat.colors(numLevels))) 
+graphics::.filled.contour(zz$x, zz$y, zz$z, levels = seq(min(zz$z, na.rm = TRUE), max(zz$z, na.rm = TRUE), length = numLevels) , col= rev(heat.colors(numLevels))) 
 contour(zz$x, zz$y, zz$z, nlevels = 10, add = TRUE)
 lines(coast$lon, coast$lat, col = 'brown')
 
@@ -51,7 +51,7 @@ par(mfrow = c(3,2))
 for ( i in 1:6) {
    numLevels <- c(5, 10, 15, 20, 30, 40)[i]
    plot(NA, NA, type = 'n', cex.lab=1.2, cex.axis = 1.15, main = paste0("Number of Contour Levels: ", numLevels), xlim = c(-20.5, 1), ylim = c(42, 64 ), xlab = 'Longitude', ylab = 'Latitude') 
-   .filled.contour(zz$x, zz$y, zz$z, levels = seq(min(zz$z, na.rm = TRUE), max(zz$z, na.rm = TRUE), length = numLevels) , col= rev(heat.colors(numLevels)))
+   graphics::.filled.contour(zz$x, zz$y, zz$z, levels = seq(min(zz$z, na.rm = TRUE), max(zz$z, na.rm = TRUE), length = numLevels) , col= rev(heat.colors(numLevels)))
    lines(coast$lon, coast$lat, col = 'brown')
 }
 
